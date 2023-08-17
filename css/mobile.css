@@ -1,0 +1,353 @@
+    @font-face{
+    font-family: 'pre';
+    src: url(../font/Pretendard-Regular.otf);
+}
+
+@font-face{
+    font-family: 'mPre';
+    src: url(../font/Pretendard-Medium.otf);
+}
+
+body{
+    font-family: 'pre';
+}
+
+header{
+    padding-top: 30px;
+}
+
+.hWrap{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hWrap ul{
+    display: flex;
+    font-size: 16px;
+    justify-content: right;
+    text-align: center;
+}
+
+.hWrap ul li{
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.hWrap ul .name{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f5f5f5;
+}
+
+.hWrap ul .skill{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f5f5f5;
+}
+
+.hWrap ul .re{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f5f5f5;
+}
+.hWrap ul .design{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f5f5f5;
+}
+
+
+header h1{
+    margin-top: 20px;
+    text-align: right;
+    color: #00a6ff;
+    font-size: 24px;
+    border-top: 1px solid #555;
+    padding-top: 30px;
+    padding-right: 26px;
+    font-family: 'mPre';
+}
+
+.s1{
+    margin-top: 70px;
+}
+
+.s1 .redesign{
+    font-size: 22px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #555;
+    font-family: 'mPre';
+}
+
+.s1 .item{
+    margin-top: 70px;
+    background-color: #f5f5f5;
+}
+
+.s1 .item:nth-child(3) h2{
+    font-size: 16px;
+}
+
+.s1 .item .wrap{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.s1 .wrap .box{
+    width: 50%;
+    padding-top: 90px;
+}
+
+.s1 .item .wrap .moca{
+    padding-top: 102px;
+}
+
+.s1 .item .wrap .prada{
+    padding-top: 88px;
+}
+
+.s1 .item .wrap .non{
+    padding-top: 107px;
+}
+
+
+.s1 .wrap .box img{
+    width: 100%;
+}
+
+.s1 .txt{
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+}
+
+.s1 .txt h2{
+    font-size: 22px;
+    font-family: 'mPre';
+}
+
+.s1 .txt h3{
+    font-size: 14px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.s1 .txt .about{
+    font-size: 14px;
+    font-family: 'mPre';
+    border-top:1px solid #555;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.s1 .txt .ex{
+    font-size: 12px;
+    color: #333;
+    margin-top: 5px;
+    line-height: 15px;
+}
+
+.s1 ul{
+    display: flex;
+    margin-top: 5px;
+}
+
+.s1 ul li span{
+    font-size: 14px;
+}
+
+.s1 ul li:nth-child(2){
+    font-size: 14px;
+    color: #555;
+    margin-left: 20px;
+    padding-top: 3px;
+}
+
+.s1 ul .tool{
+}
+
+.s1 ul .per{
+    margin-left: 1px;
+}
+
+.s1 .txt .web{
+    font-size: 14px;
+    color: #333;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #333;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.s1 .txt .web:hover{
+    color: #00a6ff;
+    border: 1px solid #00a6ff;
+}
+
+.s3{
+    margin-top: 70px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.s3 .pro{
+    font-size: 22px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #555;
+    font-family: 'mPre';
+}
+
+.s3 .cBox{
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    background-color: #f5f5f5
+}
+
+.s3 .con{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+
+.s3 .con .wrap{}
+.s3 .con .wrap .iBox{
+    width: 120px;
+    height: 135px;
+    border-radius: 20px;
+    background-color: #333;
+    background-image: url(../images/id-picture.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s3 .txt{
+}
+.s3 .txt h3{
+    font-size: 18px;
+    font-family: 'mPre';
+    margin-left: 10px;
+}
+.s3 .txt ul{
+    display: flex;
+}
+.s3 .txt ul li{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+.s3 .txt ul .pi{
+}
+
+
+.s3 .txt ul .pu{
+}
+
+
+
+.s3 .txt ul li span{
+    font-size: 14px;
+}
+
+.s3 .skill{
+    margin-top: -20px;
+}
+.s3 .skill .tag{
+    display: flex;
+    justify-content: space-between;
+}
+.s3 .skill .tag p{
+    font-size: 12px;
+    padding-top: 23.5px;
+}
+.s3 .skill .tag .bar{
+    padding-top: 25px;
+    padding-left: 10px;
+
+}
+.s3 .skill .tag .bar .background{
+    width: 60px;
+    height: 5px;
+    background-color: #444;
+    position: relative;
+}
+.s3 .skill .tag .bar .blue{
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: #00a6ff;
+    top: 0;
+    left: 0;
+}
+
+.s3 .skill .tag .bar .ill{
+    width: 60%;
+}
+
+.s3 .skill .tag .bar .pho{
+    width: 70%;
+}
+
+.s3 .skill .tag .bar .html{
+    width: 85%;
+}
+
+.s3 .skill .tag .bar .js{
+    width: 70%;
+}
+
+.pc{
+    display: none;
+}
+
+.mo{
+    display: block;
+}
+
+.round{
+    display: none;
+}
+
+.mask{
+    display: none;
+}
+
+
+@media all and (min-width:768px){
+    .s3{
+    }
+
+    .s3 .cBox{
+    }
+
+    .s3 .con{
+        justify-content: space-evenly;
+    }
+
+    .s3 .con .wrap .iBox{
+        width: 150px;
+    }
+
+    header h1{
+    }
+}/*768px

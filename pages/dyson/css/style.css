@@ -1,0 +1,1818 @@
+@font-face{
+    font-family: 'pre';
+    src: url(../font/Pretendard-Regular.otf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 6px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #333;
+    border-radius: 5px;
+    height: 50px;
+}
+
+body::-webkit-scrollbar-track{
+   background: #ccc;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #000;
+    transition: background calc(var(--duration) / 4) var(--ease);
+}
+
+.layer{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #000;
+}
+
+.layer button{
+    background-color: inherit;
+    border: none;
+}
+.layer img{
+    display: block;
+}
+.layer .wrap{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 53.5px;
+    border-top: 1px solid #b9b9b9;
+}
+
+.layer .select{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-top: -315px;
+   margin-left: -130px;
+}
+.layer .intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -245px;
+    margin-left: -170px;
+}
+.layer .vaccum{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -470px;
+    z-index: 998;
+    cursor: pointer;
+}
+
+.layer .vcimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -490px;
+    margin-left: -670px;
+    z-index: 995;
+    width: 450px;
+    height: 450px;
+    display: none;
+}
+
+.layer .vcimg img{
+    width: 100%;
+}
+
+.layer .pvaccum{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -47.5px;
+    margin-left: -497.03px;
+    z-index: 999;
+    display: none;
+}
+.layer .hair{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -270px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.layer .phair{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -47.9px;
+    margin-left: -303px;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+
+.layer .haimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -260px;
+    margin-left: 0px;
+    z-index: 999;
+    display: none;
+}
+
+
+.layer .haimg img{
+    width: 100%;
+}
+
+.layer .air{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -370px;
+    margin-top: 130px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.layer .pair{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -353px;
+    margin-top: -48px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+.layer .airimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -710px;
+    margin-top: -200px;
+    width: 600px;
+    height: 600px;
+    display: none;
+    z-index: 989;
+}
+
+.airimg img{
+    width: 100%;
+}
+
+.cursor{
+    position: fixed;
+    top: -10px;
+    left: -9px;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.cursor.active{
+    mix-blend-mode: difference;
+}
+
+.custom{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 999;
+    background-color: #ca2a82;
+    border-radius: 50%;
+}
+
+.custom.active{
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    transform: scale(3);
+    background-color: #fff;
+}
+
+:root {
+    --bg-color-hsl: 59, 3%, 94%;
+    --bg-color: hsl(var(--bg-color-hsl));
+    --bg-color-translucent: hsla(var(--bg-color-hsl), 0.95);
+    --bg-color-highlight: #ca2a82;
+    --color-text: hsl(192, 14%, 20%);
+    --color-text-highlight: #fff;
+    --page-width: 80ch;
+    --paragraph-font-size: min(max(1.2rem, 4vw), 1.4rem);
+    --header-font-size: min(max(2rem, 8vw), 4rem);
+    --space: 2rem;
+    --padding: 8vmin;
+    --duration: 1s;
+    --ease: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .dark-mode {
+    --bg-color-hsl: 0, 0%, 7%;
+    --bg-color: hsl(var(--bg-color-hsl));
+    --bg-color-translucent: hsla(var(--bg-color-hsl), 0.95);
+    --bg-color-highlight: hsl(238, 70%, 40%);
+    --color-text: hsl(0, 0%, 80%);
+    --color-text-highlight: hsl(0, 0%, 100%);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin-left: 4px;
+  }
+}
+  
+  select {
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+  label {
+    font-size: 0.8rem;
+  }
+  
+  main {
+    margin: 12rem auto;
+    padding: 0 var(--padding);
+    max-width: var(--page-width);
+  }
+  
+
+
+  
+  .text-highlight {
+    all: unset;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: color calc(var(--duration) / 4) var(--ease),
+      background-color calc(var(--duration) / 4) var(--ease),
+      background-size var(--duration) var(--ease);
+  
+    &.active {
+      color: var(--color-text-highlight);
+      background-size: 100% 100%;
+    }
+  
+    [data-highlight="background"] & {
+      background-image: linear-gradient(
+        var(--bg-color-highlight),
+        var(--bg-color-highlight)
+      );
+    }
+  
+    [data-highlight="half"] & {
+      --line-size: 0.5em;
+      background-image: linear-gradient(
+        transparent calc(100% - var(--line-size)),
+        var(--bg-color-highlight) var(--line-size)
+      );
+    }
+  
+    [data-highlight="underline"] & {
+      --line-size: 0.15em;
+      background-image: linear-gradient(
+        transparent calc(100% - var(--line-size)),
+        var(--color-text) var(--line-size)
+      );
+    }
+  
+    &::before,
+    &::after {
+      position: absolute;
+      clip-path: inset(100%);
+      clip: rect(1px, 1px, 1px, 1px);
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
+    }
+  
+    &::before {
+      content: " [highlight start] ";
+    }
+  
+    &::after {
+      content: " [highlight end] ";
+    }
+  }
+
+  .text-highlight2{
+    all: unset;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: color calc(var(--duration) / 4) var(--ease),
+      background-color calc(var(--duration) / 4) var(--ease),
+      background-size var(--duration) var(--ease);
+  
+    &.active {
+      color: var(--color-text-highlight);
+      background-size: 100% 100%;
+    }
+  
+    [data-highlight="background"] & {
+      background-image: linear-gradient(
+        var(--bg-color-highlight),
+        var(--bg-color-highlight)
+      );
+    }
+  
+    [data-highlight="half"] & {
+      --line-size: 0.5em;
+      background-image: linear-gradient(
+        transparent calc(100% - var(--line-size)),
+        var(--bg-color-highlight) var(--line-size)
+      );
+    }
+  
+    [data-highlight="underline"] & {
+      --line-size: 0.15em;
+      background-image: linear-gradient(
+        transparent calc(100% - var(--line-size)),
+        var(--color-text) var(--line-size)
+      );
+    }
+  
+    &::before,
+    &::after {
+      position: absolute;
+      clip-path: inset(100%);
+      clip: rect(1px, 1px, 1px, 1px);
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
+    }
+  
+    &::before {
+      content: " [highlight start] ";
+    }
+  
+    &::after {
+      content: " [highlight end] ";
+    }
+  }
+
+
+.slider{
+    width: 500vw;
+    display: flex;
+    height: 100vh;
+}
+
+
+
+.s1{
+    height: 100vh;
+    overflow: hidden;
+}
+header{
+    position: fixed;
+    z-index: 999;
+    background-color: #000;
+
+}
+
+.event{
+    height: 100vh;
+}
+
+header.on{
+    background-color: #dbdbdb;
+}
+
+.hWrap{
+    position: relative;
+    width: 100vw;
+    justify-content: space-between;
+    display: flex;
+    height: 55px;
+    z-index: 999;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+h1{
+    width: 120px;
+    z-index: 5;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 9998;
+}
+
+ h1 img{
+    width: 100%;
+}
+
+ header .scr{
+   margin-left: 100px;
+   margin-top: 15px;
+   font-size: 18px;
+   position: relative;
+   z-index: 999;
+}
+
+header .btn button{
+    margin-right: 100px;
+    margin-top: 15px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+header .btn button img{
+    width: 90%;
+}
+
+
+.close{
+    background-color: inherit;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 107px;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.close img{
+    width: 80%;
+}
+
+
+
+
+.s1 video{
+    width: 100%;
+    min-width: 1600px;
+    position: relative;
+}
+
+
+.s2{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+}
+
+.s2 .we{
+    display: block;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 140px;
+}
+.s2 .we img{
+    width: 100%;
+}
+
+.s2 p{
+    color: #fff;
+}
+
+.s2 .create{
+    font-size: 130px;
+    position: absolute;
+    top: 31%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.s2 .design{
+    position: absolute;
+    top: 45.5%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+.s2 .design img{
+    width: 95%;
+}
+
+.s2 .connect{
+    font-size: 130px;
+    position: absolute;
+    top: 56%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.s2 .products{
+    font-size: 16px;
+    position: absolute;
+    top: 44.5%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+.s2 .products p{
+    color: #ccc;
+}
+
+.s2 .since{
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.s2 .since img{
+}
+
+.s2 .main{
+    position: absolute;
+    top: 44%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.s2 .under{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.s2 .under img{
+}
+
+.s2 .pink{
+    position: absolute;
+    top: 14%;
+    left: -4%;
+}
+.s2 .pink img{
+}
+
+.s2 .circle{
+    position: absolute;
+    top: 45%;
+    left: -2%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+}
+.s2 .circle img{
+    width: 100%;
+}
+
+.s2 .arrow{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    margin-top: 382px;
+    margin-left: 780px;
+    width: 50px;
+}
+
+.s2 .arrow img{
+    width: 100%;
+}
+
+.s2Left{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+
+.s2Bottom{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.s2Top{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.s3{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.s3 .background{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-image: url(../images/s3\ bgimg.JPG);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+.s3 .bring{
+    position: absolute;
+    top: 57%;
+    left: 79%;
+    width: 140px;
+}
+.s3 .bring img{
+    width: 100%;
+}
+.s3 .make{
+    position: absolute;
+    top: 57%;
+    left: 89%;
+    width: 140px;
+}
+.s3 .make img{
+    width: 100%;
+}
+
+.s3 .right{
+    position: absolute;
+    top: 74%;
+    left: 103%;
+    transform: translate(-50%, -50%);
+    width: 4000px;
+}
+.s3 .right img{
+    width: 100%;
+}
+
+
+.s3 .left{
+    position: absolute;
+    top: 86%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+    width: 3600px;
+}
+.s3 .left img{
+    width: 100%;
+}
+
+.s3Con{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.s3R{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.s3L{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imgBox{
+   position: absolute;
+   top:0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+}
+
+.imgWrap{
+    width: 100vw;
+    height: 150vh;
+    position: relative;
+    margin-top: 1000px;
+}
+
+.imgBox img{
+    width: 19vw;
+}
+
+.one{
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+.two{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+}
+
+.thr{
+    position: absolute;
+    top: 45%;
+    left: 35%;
+}
+
+.fo{
+    position: absolute;
+    top: 50%;
+    left: 66%;
+}
+
+.fiv{
+    position: absolute;
+    top: 70%;
+    left: 17%;
+}
+
+
+
+.con{
+    position: relative;
+    width: 400vw;
+}
+
+
+
+.s4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+
+.s4 .sWrap{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    position: relative;
+}
+
+
+.s4 .chapter{
+    position: absolute;
+    top: 26%;
+    left: 60.8%;
+    transform: translate(-50%, -50%);
+}
+
+.s4 .main{
+    position: absolute;
+    top: 24%;
+    left: 32.6%;
+    z-index: 51;
+}
+
+
+.s4 .txt{
+    position: absolute;
+    top: 70%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+
+.s4 .vaccum{
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.s4 .under{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.s4 .pink{
+    position: absolute;
+    top: 18%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.s4 .pink img{
+}
+
+.s4 .arrow{
+    position: absolute;
+    top: 70%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 80px;
+}
+
+.s4 .arrow img{
+    width: 100%;
+}
+
+.sWrap1{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #000;
+}
+
+.s5{
+   position: absolute;
+   top: 0;
+   left: 100vw;
+   z-index: 99;
+}
+
+.s5 .best{
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+}
+.s5 .sub{
+    position: absolute;
+    top: 76%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+.s5 .vc{
+    position: absolute;
+    top: 45%;
+    left: 96%;
+    transform: translate(-50%, -50%);
+}
+.s5 .under{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.s5 .videoBox{
+    height: 730px;
+    width: 450px;
+    overflow: hidden;
+    background-color: #b9b9b9;
+    margin-left: 500px;
+    position: absolute;
+    top: 47%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.s5 video{
+    position: relative;
+    right: 65px;
+    bottom: 90px;
+}
+
+.s6{
+    position: absolute;
+    top: 0;
+    left: 200vw;
+    z-index: 119;
+}
+
+.sWrap2{
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.s6 .background{
+    position: absolute;
+    z-index: 990;
+    top: 30%;
+    left: 28%;
+}
+.s6 .main{
+    position: absolute;
+    top: 50%;
+    left: 26.5%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+.s6 .right{
+    position: absolute;
+    top: 50%;
+    left: 94%;
+    transform: translate(-50%, -50%);
+}
+.s6 .pink{
+    position: absolute;
+    top: 16%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+
+.s6 .under{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+}
+
+.sWrap3{
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.s7{
+    position: absolute;
+    left: 300vw;
+    top: 0;
+    z-index: 101;
+}
+
+.s7 .under{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -900px;
+    margin-top: 360px;
+}
+
+.s7 .arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: -850px;
+}
+.s7 .arrowRight{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: 850px;
+}
+
+.s7 .left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -750px;
+    margin-top: -350px;
+}
+.s7 .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -500px;
+    margin-left: -800px;
+    width: 1200px;
+    height: 1200px;
+}
+
+.s7 .center img{
+    width: 100%;
+}
+.s7 .right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 400px;
+    width: 1200px;
+    height: 1200px;
+}
+
+.s7 .right img{
+    width: 100%;
+}
+
+.s7 .ill{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -430px;
+    margin-top: -150px;
+}
+.s7 .dust{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 250px;
+    margin-left: 50px;
+}
+
+.s7 .moment{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -370px;
+    margin-left: 100px;
+}
+.s7 .control{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -770px;
+    margin-top: 120px;
+}
+
+.sWrap4{
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.s8{
+    position: absolute;
+    top: 0;
+    left: 400vw;
+    z-index: 102;
+}
+
+.s8 .hc{
+    position: absolute;
+    top: 48%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+.s8 .small{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.s8 .hairBar1{
+    position: absolute;
+    top: 50%;
+    left: 3.5%;
+    transform: translate(-50%, -50%);
+}
+
+.s8 .hairBar2{
+    position: absolute;
+    top: 50%;
+    left: 96%;
+    transform: translate(-50%, -50%);
+}
+
+.s8 .under{
+    position: absolute;
+    top: 92%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+}
+
+.s8 .chapter2{
+    position: absolute;
+    top: 27%;
+    left: 22.9%;
+    transform: translate(-50%, -50%);
+}
+
+.s8 .chapter2 img{
+}
+
+.s8 .txt{
+    position: absolute;
+    top: 55%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+}
+
+.s8 .txt img{
+    width: 100%;
+}
+
+.s8 .round{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -360px;
+    margin-left: 570px;
+    z-index: 999;
+}
+
+.s9{
+    background-color: #dbdbdb;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-top: 300vh;
+}
+
+.s9 .videoBox{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 46.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+}
+
+.s9 video{
+    width: 100%;
+}
+
+.s9 .under{
+    position: absolute;
+    top: 90.5%;
+    left: 2.5%;
+}
+.s9 .left{
+    position: absolute;
+    top: 42%;
+    left: 2.5%;
+}
+.s9 .right{
+    position: absolute;
+    top: 42%;
+    right: 2.5%;
+}
+
+.s10{
+    background-color: #dbdbdb;
+    width: 100vw;
+    height: 220vh;
+    position: relative;
+}
+
+.s10 .firstTxt{
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+.s10 .air1{
+    height: 600px;
+    width: 730px;
+    position: absolute;
+    top: 16%;
+    left: 14%;
+}
+
+.s10 .air1 img{
+    width: 100%;
+}
+
+.s10 .air2{
+    width: 500px;
+    height: 310px;
+    position: absolute;
+    top: 30.85%;
+    left: 62%;
+}
+.s10 .air2 img{
+    width: 100%;
+}
+
+.s10 .firstSub{
+    position: absolute;
+    top: 15.1%;
+    left: 60.5%;
+}
+
+.s10 .round1{
+    position: absolute;
+    top: 26%;
+    left: 61.8%;
+}
+
+.s10 .super1{
+    width: 730px;
+    height: 435px;
+    position: absolute;
+    top: 61%;
+    left: 14%;
+}
+.s10 .super1 img{
+    width: 100%;
+}
+.s10 .super2 {
+   width: 498px;
+   height: 745px;
+   position: absolute;
+   top: 61%;
+   left: 62%;
+}
+.s10 .super2 img{
+    width: 100%;
+}
+
+.s10 .scalp{
+    position: absolute;
+    top: 48.5%;
+    left: 62%;
+}
+
+.s10 .secondSub{
+    position: absolute;
+    top: 85.3%;
+    left: 31%;
+}
+
+.s10 .round2{
+    position: absolute;
+    top: 52%;
+    left: 14%;
+}
+
+.s10 .pink{
+    position: absolute;
+    left: 82%;
+    top: 3%;
+}
+
+.s11{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+    z-index: 998;
+}
+
+.s11 .chapter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left: -9px;
+}
+
+.s11 .main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 180px;
+    margin-left: -895px;
+}
+
+.s11 .sub{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 85px;
+    margin-left: -895px;
+}
+
+.s11 .left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -897px;
+}
+
+.s11 .right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: 853px;
+}
+
+.s11 .pink{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: 832px;
+}
+
+.s11 .rort{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -220px;
+    margin-top: 140px;
+}
+
+.rort img{
+    width: 100%;
+}
+
+.rWrap{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.sBox{
+    width: 600vw;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+.s12{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.s12 .pWrap12{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.s12 .videoBox{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.s12 video{
+    width: 100%;
+    position: relative;
+    bottom: 55px;
+}
+
+.s13{
+    position: absolute;
+    top: 0;
+    left: 100vw;
+}
+
+.s13 .pWrap13{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.s13 .filter{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    background-color: #000;
+    opacity: 0.35;
+}
+
+
+.s13 .txt{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.s13 .arrow{
+    width: 100px;
+    position: absolute;
+    top: 36%;
+    left: 54.5%;
+}
+
+.s13 .arrow .wrap{
+    display: flex;
+}
+
+.s13 .arrow img{
+    width: 100%;
+}
+.s13 .background{
+    position: absolute;
+    top: -50%;
+    left: 12%;
+    display: flex;
+}
+
+.s13 .background img{
+    display: block;
+    margin-left: 80px;
+}
+
+.s13 .background .airP1{
+}
+.s13 .background .airP2{
+    padding-top: 280px;
+}
+
+
+.s13 .left{
+    position: absolute;
+    left: 2%;
+    top: 40%;
+}
+.s13 .right{
+    position: absolute;
+    left: 94.5%;
+    top: 40%;
+}
+
+.s13 .under{
+    position: absolute;
+    top: 85%;
+    left: 1.2%;
+}
+
+.s13 .under img{
+}
+
+.s13 .pink{
+    position: absolute;
+    top: -46%;
+    left: 35%;
+}
+
+.s14{
+    position: absolute;
+    top: 0;
+    left: 200vw;
+}
+
+.s14 .pWrap14{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.s14 .main{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.s14 .txt2{
+    position: absolute;
+    top: 50.6%;
+    left: 50.4%;
+    margin-left: -720px;
+    margin-top: -280px;
+}
+.s14 .pTxt{
+    position: absolute;
+    top: 48%;
+    left: 13%;
+}
+
+.s14 .pTxt p{
+    color: #fff;
+    font-size: 26px;
+    font-family: 'pre';
+    margin-top: 8px;
+}
+
+
+.s14 .left{
+    position: absolute;
+    top: 41%;
+    left: 2%;
+}
+.s14 .right{
+    position: absolute;
+    top: 41%;
+    right: 2.5%;
+}
+
+.s14 .pink{
+    position: absolute;
+    top: 10%;
+    left: 93.5%;
+}
+
+.s14 .under{
+    position: absolute;
+    top: 86%;
+    left: 1%;
+}
+
+.s15{
+    position: absolute;
+    top: 0;
+    left: 300vw;
+}
+
+.s15 .pWrap15{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000; 
+}
+
+.s15 .under{
+    position: absolute;
+    top: 86%;
+    left: 1%;
+}
+
+.s15 .main{
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+
+.s15 .txt2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -705px;
+    margin-top: -272px;
+}
+
+.s15 .pTxt{
+    position: absolute;
+    top: 48%;
+    left: 13.2%;
+}
+
+.s15 .pTxt p{
+    color: #fff;
+    font-size: 26px;
+    font-family: 'pre';
+    margin-top: 8px;
+}
+
+
+.s15 .left{
+    position: absolute;
+    top: 42%;
+    left: 2%;
+}
+.s15 .right{
+    position: absolute;
+    top: 42%;
+    right: 2.5%;
+}
+
+.s15 .pink{
+    position: absolute;
+    top: 10%;
+    left: 93.5%;
+}
+
+.s16{
+    position: absolute;
+    top: 0;
+    left: 400vw;
+}
+
+.s16 .pWrap16{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+}
+
+.s16 .left{
+    position: absolute;
+    width: 550px;
+    height: 640px;
+    left: 52.5%;
+    top: 50%;
+    margin-left: -700px;
+    margin-top: -210px;
+    overflow: hidden;
+}
+.s16 .left video{
+    width: 100%;
+    position: relative;
+}
+.s16 .lTxt{
+    position: absolute;
+    top: 50%;
+    left: 52.5%;
+    margin-left: -700px;
+    margin-top: -380px;
+}
+
+.s16 .right{
+    position: absolute;
+    width: 550px;
+    height: 640px;
+    right: 47%;
+    top: 50%;
+    margin-right: -650px;
+    margin-top: -210px;
+    overflow: hidden;
+}
+.s16 .right video{
+    position: relative;
+    width: 100%;
+
+}
+.s16 .rTxt{
+    position: absolute;
+    top: 50%;
+    right: 47%;
+    margin-right: -665px;
+    margin-top: -380px;
+}
+
+.s16 .leftBar{
+    position: absolute;
+    top: 43%;
+    left: 3%;
+}
+.s16 .rightBar{
+    position: absolute;
+    top: 43%;
+    right: 3%;
+}
+
+.s16 .re1{
+    position: absolute;
+    top: 50%;
+    left: 52.5%;
+    margin-top: -285px;
+    margin-left: -700px;
+}
+.s16 .re2{
+    position: absolute;
+    top: 50%;
+    right: 47%;
+    margin-top: -285px;
+    margin-right: -140px;
+}
+
+.s16 .rotate{
+    transform: rotate(45deg); animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.s17{
+    position: absolute;
+    top: 0;
+    left: 500vw;
+}
+
+.s17 .pWrap17{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+.s17 .pink{
+    position: absolute;
+    top: 10%;
+    left: 92%;
+}
+.s17 .many{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    z-index: 999;
+    margin-left: -1000px;
+    margin-top: 40px;
+    width: 800px;
+}
+
+.s17 .many img{
+    width: 100%;
+}
+
+.s17 .thanks{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 800px;
+    margin-top: 40px;
+}
+.s17 .thanks img{
+    width: 100%;
+}
+
+
+.s17 .left{
+    position: absolute;
+    top: 79.8%;
+    left: 2%;
+    width: 650px;
+}
+
+.s17 .left img{
+    width: 100%;
+}
+
+.s17 .right{
+    position: absolute;
+    top: 77.6%;
+    left: 63%;
+    width: 650px;
+}
+
+.s17 .right img{
+    width: 100%;
+}
+
+
+.s17 .contact{
+    position: absolute;
+    top: 78%;
+    left: 36%;
+}
+.s17 .sns{
+    position: absolute;
+    top: 81.5%;
+    left: 52.3%;
+}
+.s17 .under{
+    position: absolute;
+    top: 86%;
+    left: 7%;
+}
+.s17 .arrow{
+    position: absolute;
+    top: 90.2%;
+    left: 86.5%;
+}
+.s17 .arrow .aWrap{
+    width: 75px;
+    display: flex;
+}
+.s17 .arrow .aWrap img{
+    width: 100%;
+}
+
+@keyframes moveImage {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -100px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+.s17 .main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 120px;
+    margin-left: -380px;
+    width: 765px;
+    height: 703px;
+    animation: moveImage 3s linear infinite;
+
+}
+
+.s17 .main img{
+    width: 100%;
+}
+
+.blank{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+
+

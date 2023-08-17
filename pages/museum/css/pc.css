@@ -1,0 +1,593 @@
+@media all and (min-width:1200px){
+    @font-face{
+        font-family: 'pre';
+        src: url(../font/Pretendard-Regular.otf);
+    }
+    
+    @font-face{
+        font-family: 'lora';
+        src: url(../font/Lora-Regular.ttf);
+    }
+
+    header{
+        height: 90px;
+        width: 100vw;
+        background-color: #fff;
+        position: fixed;
+        transition: top 0.2s ease-in-out;
+        z-index: 999;
+        margin-top: -10px;
+    }
+
+    .nav-up {
+        top: -90px;
+    }
+ 
+    h1{
+        text-align: center;
+        margin-right: 80px;
+        margin-top: 25px;
+    }
+    
+    h1 img{
+        width: 350px;
+    }
+
+    .hBtn{
+        display: none;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .hWrap li:hover{
+        color: #c9ab81;
+    }
+
+    .gnb{
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .gnb li{
+        display: block;
+        margin-left: 60px;
+        font-family: 'pre';
+        font-size: 18px;
+    }
+    .nav{
+        display: flex;
+        margin-top: 40px;
+    }
+    .nav li{
+        display: block;
+        font-family: pre;
+        font-size: 18px;
+        margin-right: 80px;
+    }
+
+    .hWrap{
+        display: flex;
+        width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+
+    .s1{
+        margin-left: 60px;
+        margin-right: 60px; 
+        padding-top: 90px;
+    }
+   
+    .s1 .slideWrap{
+        width: 1800px;
+        /* height: 840px; */
+    }
+
+    .s1 .slideWrap .mo{
+        display: none;
+    }
+
+    .number{
+        display: none;
+    }
+
+    .s1 .sTxt1{
+        color: #fff;
+        font-family: 'lora';
+        font-size: 80px;
+        margin-top: 300px;
+    }
+
+    .s1 .sTxt2{
+        color: #fff;
+        font-family: 'lora';
+        font-size: 80px;
+        margin-top: 330px;
+    }
+
+    .s1 .sTxt3{
+        color: #fff;
+        font-family: 'lora';
+        font-size: 80px;
+        margin-top: 330px;
+    }
+    
+
+    .s1 .slick-dots{
+        display: flex;
+        width: 800px;
+        height: 140px;
+        background-color: #fff;
+        margin-left: 1000px;
+        margin-top: -140px;
+        position: relative;
+    }
+    .s1 .slick-dots li{
+        margin-left: 77px;
+    }
+    .s1 .slick-dots li button{
+        color: #ccc;
+        font-family: 'lora';
+        line-height: 65px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .s1 .slick-dots li.slick-active button span{
+        color: #111;
+    }
+
+    .s1 .slick-dots li.slick-active{
+        color: #c9ab81;
+    }
+
+
+
+    .s1 .slideWrap .pc1{
+        background-image: url(../images/s1\ slide1.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1800px;
+        height: 840px;
+        display: block;
+    }
+
+    .s1 .slideWrap .pc2{
+        background-image: url(../images/s1\ slide2.jpg);
+        background-position: center -700px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1800px;
+        height: 840px;
+        display: block;
+    }
+
+    .s1 .slideWrap .pc3{
+        background-image: url(../images/s1\ slide3.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1800px;
+        height: 840px;
+        display: block;
+    }
+
+    .s1 span{
+        display: block; 
+        font-size: 22px; 
+        line-height: 20px;
+    }
+
+    .s1 .number{
+        width: 800px;
+        height: 180px;
+        margin-left: 75px;
+    }
+
+    .nWrap p{
+        font-size: 18px;
+    }
+
+    .nWrap div{
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    .round{
+        display: none;
+    }
+
+    .s2{
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .s2 .leftBar{
+        position: absolute;
+        top: 7%;
+        left: 28%;
+    }
+
+    .s2 .rightBar{
+        position: absolute;
+        top: 7%;
+        right: 28%;
+    }
+
+    .s2 .slideWrap div{
+        margin: 0;
+    }
+
+    .s2 .slideWrap{
+        width: 1800px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .s2 .item .poster{
+        width: 367px;
+        height: 515px;
+    }
+
+    .s2 h2{
+        font-size: 20px;
+        color: #c9ab81;
+    }
+
+    .s2 h3{
+        font-size: 50px;
+        color: #222;
+    }
+
+    .s2 .txt .title{
+        font-size: 26px;
+        margin-top: 5px;
+    }
+
+    .s2 .txt .date{
+        font-size: 18px;
+        width: 367px;
+    }
+
+
+    .s2 .item:hover .over{
+        opacity: 1;
+        visibility: visible;
+        -webkit-clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0);
+        -webkit-transition: all 0.4s cubic-bezier(.48,.57,.42,.92);
+        transition: all 0.4s cubic-bezier(.48,.57,.42,.92);
+    }
+    .s2 .over{
+        width: 80%;
+        height: 76%;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(255,255,255,0.8);
+        -webkit-clip-path: inset(0 100% 0 0);
+        clip-path: inset(0 100% 0 0);
+        -webkit-transition: all 0.2s cubic-bezier(.48,.57,.42,.92);
+        transition: all 0.2s cubic-bezier(.48,.57,.42,.92);
+    }
+
+    .s2 .over .vBox{
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 200px;
+    }
+
+    .s2 .over .vBox p{
+        font-size: 18px;
+    }
+
+    .s2 .over .box{
+        margin-top: 100px;
+        margin-left: 110px;
+    }
+
+    .s2 .eye{
+        width: 40px;
+        height: 30px;
+        margin-right: 8px;
+        position: relative;
+    }
+
+    .s2 .eye:hover .eBefore{
+        display: none;
+    }
+
+    .s2 .eye:hover .eAfter{
+        display: block;
+    }
+
+    .s2 .eye .eAfter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .s2 .eye img{
+        width: 100%;
+    }
+    .s2 .box .heart{
+        width: 20px;
+        margin-top: 10px;
+        margin-left: 8px;
+        position: relative;
+    }
+
+    .s2 .box .heart:hover .hBefore{
+        display: none;
+    }
+
+    
+    .s2 .box .heart:hover .hAfter{
+        display: block;
+    }
+
+    .s2 .heart .hAfter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .s2 .heart img{
+        width: 100%;
+    }
+
+   
+    .s3{
+        margin-left: 60px;
+        margin-right: 60px;
+        width: 1800px;
+        height: 1050px;
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .s3 .leftBar{
+        position: absolute;
+        top: 10%;
+        left: 34%;
+    }
+
+    .s3 .rightBar{
+        position: absolute;
+        top: 10%;
+        right: 34%;
+    }
+
+
+    .s3 .mo{
+        display: none;
+    }
+
+    .s3 .pBox{
+        margin-left: auto;
+        margin-right: auto;
+        margin-right: 52%;
+        width: 500px;
+        height: 720px;
+        margin-top: 100px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .s3 .pc{
+        display: block; 
+        width: 100%;
+    }
+
+    .s3 h2{
+        font-size: 20px;
+        padding-top: 45px;
+        color: #c9ab81;
+    }
+    .s3 h3{
+        font-size: 50px;
+        padding-top: 10px;
+        color: #222;
+    }
+
+    .s3 .txt{
+        width: 1080px;
+        height: 620px;
+        background-color: #fff;
+        position: absolute;
+        top: 17%;
+        left: 25%;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .s3 .tWrap{
+        margin-left: 430px;
+        margin-top: 230px;
+    }
+
+    .s3 .txt .title{
+        font-size: 34px;
+    }
+
+    .s3 .txt .place{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .s3 .txt .ex{
+        font-size: 20px;
+        margin-top: 20px
+    }
+
+    .s3 .txt .read{
+        font-size: 20px;
+        width: 128px;
+        height: 45px;
+        line-height: 45px;
+        margin-top: 40px
+    }
+
+
+    .s4{
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .s4 .leftBar{
+        position: absolute;
+        top: 8%;
+        left: 32%;
+    }
+
+    .s4 .rightBar{
+        position: absolute;
+        top: 8%;
+        right: 32%;
+    }
+
+    .s4 .videoBox{
+        width: 800px;
+        height: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .s4 video{
+        width: 100%;
+    }
+
+
+    .s4 h2{
+        color: #c9ab81;
+        font-size: 20px;
+    }
+    .s4 h3{
+        color: #222;
+        font-size: 50px;
+    }
+
+    .s5{
+        margin-top: 130px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .s5 .background{
+        width: 1800px;
+        height: 800px;
+        background-attachment: fixed;
+    }
+
+    .s5 .box{
+        width: 1530px;
+        height: 390px;
+    }
+
+    .s5 h2{
+        font-size: 40px;
+        margin-top: 70px;
+    }
+
+    .s5 h3{
+        font-size: 24px;
+        margin-top: 65px;
+    }
+
+    .s5 p{
+        font-size: 24px;
+        width: 220px;
+        height: 60px;
+        line-height: 60px;
+        margin-top: 55px;
+    }
+
+    .s6{
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .s6 .leftBar{
+        position: absolute;
+        top: 10.5%;
+        left: 34%;
+    }
+
+    .s6 .rightBar{
+        position: absolute;
+        top: 10.5%;
+        right: 34%;
+    }
+
+    .s6 h2{
+        font-size: 20px;
+        color: #c9ab81;
+        margin-top: 10px;
+    }
+    .s6 h3{
+        font-size: 50px;
+        color: #222;
+        margin-top: 30px;
+    }
+
+    .s6 .slideWrap{
+        width: 1800px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .s6 .slideWrap img{
+        width: 370px;
+        height: 512px;
+    }
+
+    .s6 .slideWrap div{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+
+    .s6 .read img{
+        width: 30px;
+        height: 2px;
+    }
+
+    .s6 .title{
+        font-size: 24px;
+        font-family: 'mPre';
+    }
+
+    .s6 .content{
+        font-size: 18px;
+        color: #333;
+    }
+
+    .s6 .read{
+        font-size: 18px;
+    }
+
+    footer{
+        margin-top: 100px;
+    }
+
+    footer ul{
+        margin-left: 325px;
+    }
+
+    footer ul li{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+   
+}
+
